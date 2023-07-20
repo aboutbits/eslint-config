@@ -1,0 +1,47 @@
+{
+  "name": "@aboutbits/eslint-config",
+  "version": "0.0.1",
+  "description": "AboutBits' ESLint config presets",
+  "files": [
+    "readme.md",
+    "index.js",
+    "react.js"
+  ],
+  "exports": {
+    ".": "index.js",
+    "./react": "react.js"
+  },
+  "engines": {
+    "npm": ">=8",
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "",
+    "checks": "",
+    "prepublishOnly": "npm run checks",
+    "prepare": "npm run build",
+    "preversion": "npm run checks",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboutbits/eslint-config"
+  },
+  "private": false,
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "typescript",
+    "react"
+  ],
+  "author": "AboutBits",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aboutbits/eslint-config/issues"
+  },
+  "homepage": "https://github.com/aboutbits/eslint-config",
+  "publishConfig": {
+    "access": "public"
+  }
+}
