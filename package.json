@@ -23,7 +23,6 @@
     "prepublishOnly": "npm run checks",
     "prepare": "npm run build",
     "preversion": "npm run checks",
-    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
