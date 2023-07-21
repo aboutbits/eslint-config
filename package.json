@@ -5,11 +5,13 @@
   "files": [
     "readme.md",
     "index.js",
-    "react.js"
+    "react.js",
+    "next.js"
   ],
   "exports": {
-    ".": "index.js",
-    "./react": "react.js"
+    ".": "./index.js",
+    "./react": "./react.js",
+    "./next": "./next.js"
   },
   "engines": {
     "npm": ">=8",
@@ -28,7 +30,6 @@
     "type": "git",
     "url": "git+https://github.com/aboutbits/eslint-config"
   },
-  "private": false,
   "keywords": [
     "eslint-config",
     "eslint",
@@ -41,7 +42,5 @@
     "url": "https://github.com/aboutbits/eslint-config/issues"
   },
   "homepage": "https://github.com/aboutbits/eslint-config",
-  "publishConfig": {
-    "access": "public"
-  }
+  "prettier": "@aboutbits/prettier-config"
 }
