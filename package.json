@@ -2,6 +2,10 @@
   "name": "@aboutbits/eslint-config",
   "version": "1.0.0",
   "description": "AboutBits' ESLint config presets",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "readme.md",
     "index.js",
