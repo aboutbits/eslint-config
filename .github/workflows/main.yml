@@ -16,10 +16,10 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-      - uses: actions/setup-node@v3
+      - uses: aboutbits/github-actions-node/setup-and-install@v2
         with:
           node-version: 16
-      - run: npm install
+          registry-url: 'https://registry.npmjs.org'
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
