@@ -1,4 +1,4 @@
-# AboutBits ESLint config
+# @aboutbits/eslint-config
 
 [![npm package](https://badge.fury.io/js/%40aboutbits%2Feslint-config.svg)](https://badge.fury.io/js/%40aboutbits%2Feslint-config)
 [![license](https://img.shields.io/github/license/aboutbits/eslint-config)](https://github.com/aboutbits/eslint-config/blob/main/license.md)
