@@ -8,14 +8,12 @@
   },
   "files": [
     "readme.md",
-    "index.js",
-    "react.js",
-    "next.js"
+    "configs/*"
   ],
   "exports": {
-    ".": "./index.js",
-    "./react": "./react.js",
-    "./next": "./next.js"
+    ".": "./configs/index.js",
+    "./react": "./configs/react.js",
+    "./next": "./configs/next.js"
   },
   "engines": {
     "npm": ">=8",
@@ -47,14 +45,14 @@
   "homepage": "https://github.com/aboutbits/eslint-config",
   "prettier": "@aboutbits/prettier-config",
   "dependencies": {
+    "@aboutbits/prettier-config": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.0",
-    "@aboutbits/prettier-config": "^1.0.5"
+    "prettier": "^3.0.0"
   },
   "peerDependencies": {
     "eslint-plugin-react": "^7.33.0",
@@ -71,6 +69,5 @@
     "eslint-plugin-react-hooks": {
       "optional": true
     }
-  },
-  "devDependencies": {}
+  }
 }
