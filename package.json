@@ -53,7 +53,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "@aboutbits/prettier-config": "^1.0.5"
   },
   "peerDependencies": {
     "eslint-plugin-react": "^7.33.0",
@@ -70,5 +71,6 @@
     "eslint-plugin-react-hooks": {
       "optional": true
     }
-  }
+  },
+  "devDependencies": {}
 }

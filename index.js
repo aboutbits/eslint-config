@@ -58,6 +58,12 @@ module.exports = {
       {
         allow: ['warn', 'error', 'assert']
       }
+    ],
+    '@typescript-eslint/strict-boolean-expressions': [
+      'error',
+      {
+        allowNullableBoolean: true
+      }
     ]
   }
 }
