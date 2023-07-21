@@ -11,6 +11,9 @@ AboutBit's [ESLint](https://eslint.org/) config presets
   - [TypeScript](#typescript)
   - [TypeScript + React](#typescript--react)
   - [TypeScript + Next.js](#typescript--nextjs)
+  - [FormatJS](#formatjs)
+  - [Combining presets](#combining-presets)
+  - [Overriding Rules](#overriding-rules)
 - [Build & Publish](#build--publish)
 - [About](#about)
 
@@ -26,9 +29,9 @@ npm i -D @aboutbits/eslint-config
 
 `.eslintrc`
 
-```sh
+```json
 {
-  "extends": "@aboutbits"
+  "extends": "@aboutbits/ts"
 }
 ```
 
@@ -42,15 +45,51 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 
 `.eslintrc`
 
-```sh
+```json
 {
-  "extends": "@aboutbits/react"
+  "extends": "@aboutbits/ts-react"
 }
 ```
 
-### TypeScript + Next.js + FormatJS
+### TypeScript + Next.js
+
+Install the required packages, assuming that you have `next` already installed:
+
+```sh
+npm i -D eslint-plugin-react eslint-plugin-react-hooks
+```
+
+`.eslintrc`
+
+```json
+{
+  "extends": "@aboutbits/ts-next"
+}
+```
+
+### FormatJS
 
 Install the required packages:
+
+```sh
+npm i -D eslint-plugin-formatjs
+```
+
+`.eslintrc`
+
+```json
+{
+  "extends": "@aboutbits/formatjs"
+}
+```
+
+### Combining presets
+
+Most presets are mutually exclusive, which means that you should not combine them.
+However, you may combine the preset `formatjs` with any other preset you like.
+The following shows how to combine it with the preset `ts-next`:
+
+Install the required packages, assuming that you have `next` already installed:
 
 ```sh
 npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-formatjs
@@ -58,17 +97,19 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-formatjs
 
 `.eslintrc`
 
-```sh
+```json
 {
-  "extends": "@aboutbits/next"
+  "extends": ["@aboutbits/ts-next", "@aboutbits/formatjs"]
 }
 ```
 
 ### Overriding rules
 
-```sh
+`.eslintrc`
+
+```json
 {
-  "extends": "@aboutbits",
+  "extends": "@aboutbits/ts",
   "rules": {
     // your rules...
   }

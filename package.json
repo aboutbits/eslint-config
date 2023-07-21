@@ -11,9 +11,10 @@
     "configs/*"
   ],
   "exports": {
-    ".": "./configs/index.js",
-    "./react": "./configs/react.js",
-    "./next": "./configs/next.js"
+    "./ts": "./configs/ts.js",
+    "./ts-react": "./configs/ts-react.js",
+    "./ts-next": "./configs/ts-next.js",
+    "./formatjs": "./configs/formatjs.js"
   },
   "engines": {
     "npm": ">=8",
