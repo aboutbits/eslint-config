@@ -41,5 +41,30 @@
     "url": "https://github.com/aboutbits/eslint-config/issues"
   },
   "homepage": "https://github.com/aboutbits/eslint-config",
-  "prettier": "@aboutbits/prettier-config"
+  "prettier": "@aboutbits/prettier-config",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0"
+  },
+  "peerDependencies": {
+    "next": ">=12.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    },
+    "eslint-plugin-import": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
+  }
 }
