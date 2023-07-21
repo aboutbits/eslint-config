@@ -8,8 +8,9 @@ AboutBit's [ESLint](https://eslint.org/) config presets
 ## Table of content
 
 - [Usage](#usage)
-  - [Example usage with Next.js](#example-usage-with-nextjs)
-  - [Example usage with React Router and zod](#example-usage-with-react-router-and-zod)
+  - [TypeScript](#typescript)
+  - [TypeScript + React](#typescript--react)
+  - [TypeScript + Next.js](#typescript--nextjs)
 - [Build & Publish](#build--publish)
 - [About](#about)
 
