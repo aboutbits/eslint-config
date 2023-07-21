@@ -18,14 +18,63 @@ AboutBit's [ESLint](https://eslint.org/) config presets
 Install the package:
 
 ```sh
-npm install @aboutbits/eslint-config
+npm i -D @aboutbits/eslint-config
 ```
 
-// TODO: Show how the `.eslintrc.json` of a project should look like
+### TypeScript
 
-// TODO: Show how the config can be overwritten
+`.eslintrc`
 
-## Build & Publish
+```sh
+{
+  "extends": "@aboutbits"
+}
+```
+
+### TypeScript + React
+
+Install the required packages:
+
+```sh
+npm i -D eslint-plugin-react eslint-plugin-react-hooks
+```
+
+`.eslintrc`
+
+```sh
+{
+  "extends": "@aboutbits/react"
+}
+```
+
+### TypeScript + Next.js
+
+Install the required packages:
+
+```sh
+npm i -D eslint-plugin-react eslint-plugin-react-hooks
+```
+
+`.eslintrc`
+
+```sh
+{
+  "extends": "@aboutbits/next"
+}
+```
+
+### Overriding rules
+
+```sh
+{
+  "extends": "@aboutbits",
+  "rules": {
+    // your rules...
+  }
+}
+```
+
+## Publish
 
 To publish the package commit all changes and push them to main. Then run one of the following commands locally:
 
