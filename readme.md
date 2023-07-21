@@ -53,10 +53,10 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 
 ### TypeScript + Next.js
 
-Install the required packages, assuming that you have `next` already installed:
+Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks
+npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
 ```
 
 `.eslintrc`
@@ -89,10 +89,10 @@ Most presets are mutually exclusive, which means that you should not combine the
 However, you may combine the preset `formatjs` with any other preset you like.
 The following shows how to combine it with the preset `ts-next`:
 
-Install the required packages, assuming that you have `next` already installed:
+Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-formatjs
+npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
 ```
 
 `.eslintrc`

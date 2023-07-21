@@ -58,7 +58,7 @@
   "peerDependencies": {
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "next": "^12.0.0",
+    "@next/eslint-plugin-next": "^13.4.11",
     "eslint-plugin-formatjs": "^4.5.0"
   },
   "peerDependenciesMeta": {
@@ -68,7 +68,7 @@
     "eslint-plugin-react-hooks": {
       "optional": true
     },
-    "next": {
+    "@next/eslint-plugin-next": {
       "optional": true
     },
     "eslint-plugin-formatjs": {
