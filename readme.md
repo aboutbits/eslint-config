@@ -48,12 +48,12 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 }
 ```
 
-### TypeScript + Next.js
+### TypeScript + Next.js + FormatJS
 
 Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks
+npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-formatjs
 ```
 
 `.eslintrc`

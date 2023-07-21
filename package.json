@@ -57,16 +57,20 @@
   "peerDependencies": {
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "next": ">=12.0.0"
+    "next": "^12.0.0",
+    "eslint-plugin-formatjs": "^4.5.0"
   },
   "peerDependenciesMeta": {
-    "next": {
-      "optional": true
-    },
     "eslint-plugin-react": {
       "optional": true
     },
     "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "eslint-plugin-formatjs": {
       "optional": true
     }
   }
