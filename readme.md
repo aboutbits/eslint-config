@@ -25,6 +25,40 @@ Install the package:
 npm i -D @aboutbits/eslint-config
 ```
 
+We recommend linting by running `eslint` without `--ext` option. What files are to be linted should be specified inside the ESLint config and the TypeScript config.
+All files included (or not ignored) by the ESLint config (`.eslintrc.json`) must be included by the TypeScript config (`tsconfig.json`).
+For example, if this is your `.eslintrc.json`:
+
+```json
+{
+  // ...remaining config
+  "ignorePatterns": ["node_modules", "dist"]
+}
+```
+
+You may include the following files inside your `tsconfig.json`:
+
+```json
+{
+  // ...remaining config
+  "exclude": ["node_modules", "dist"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
+```
+
+Should you have files that you want to be linted, but not inside your `tsconfig.json`, you can create a `tsconfig.eslint.json` file.
+Then change `.eslintrc.json` to be:
+
+```json
+{
+  // ...omitted
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  }
+  // ...omitted
+}
+```
+
 ### TypeScript
 
 Install the required packages:
@@ -33,11 +67,14 @@ Install the required packages:
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import
 ```
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
-  "extends": "@aboutbits/eslint-config/ts"
+  "extends": "@aboutbits/eslint-config/ts",
+  "parserOptions": {
+    "project": true
+  }
 }
 ```
 
@@ -49,11 +86,14 @@ Install the required packages:
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
 ```
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
-  "extends": "@aboutbits/eslint-config/ts-react"
+  "extends": "@aboutbits/eslint-config/ts-react",
+  "parserOptions": {
+    "project": true
+  }
 }
 ```
 
@@ -65,11 +105,14 @@ Install the required packages:
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
 ```
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
-  "extends": "@aboutbits/eslint-config/ts-next"
+  "extends": "@aboutbits/eslint-config/ts-next",
+  "parserOptions": {
+    "project": true
+  }
 }
 ```
 
@@ -81,11 +124,14 @@ Install the required packages:
 npm i -D eslint eslint-plugin-formatjs
 ```
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
-  "extends": "@aboutbits/eslint-config/formatjs"
+  "extends": "@aboutbits/eslint-config/formatjs",
+  "parserOptions": {
+    "project": true
+  }
 }
 ```
 
@@ -101,24 +147,30 @@ Install the required packages:
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
 ```
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
   "extends": [
     "@aboutbits/eslint-config/ts-next",
     "@aboutbits/eslint-config/formatjs"
-  ]
+  ],
+  "parserOptions": {
+    "project": true
+  }
 }
 ```
 
 ### Overriding rules
 
-`.eslintrc`
+`.eslintrc.json`
 
 ```json
 {
   "extends": "@aboutbits/eslint-config/ts",
+  "parserOptions": {
+    "project": true
+  },
   "rules": {
     // your rules...
   }
