@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
-    'next/core-web-vitals',
     './ts-react.js',
+    'plugin:@next/next/core-web-vitals',
     'plugin:prettier/recommended'
   ],
   rules: {
