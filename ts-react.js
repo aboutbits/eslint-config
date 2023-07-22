@@ -5,6 +5,11 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended'
   ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   plugins: ['react', 'react-hooks'],
   settings: {
     react: {
