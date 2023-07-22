@@ -27,9 +27,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   settings: {
-    react: {
-      version: 'detect'
-    },
     'import/resolver': {
       node: {
         paths: ['./']
@@ -37,8 +34,6 @@ module.exports = {
     }
   },
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
