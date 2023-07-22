@@ -26,6 +26,12 @@ module.exports = {
     commonjs: true
   },
   plugins: ['@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true
+    }
+  },
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'error',
