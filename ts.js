@@ -11,8 +11,15 @@ module.exports = {
     project: true,
     tsconfigRootDir: __dirname,
     sourceType: 'module',
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
+    extraFileExtensions: ['.json']
   },
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js']
+    }
+  ],
   env: {
     node: true,
     browser: true,
