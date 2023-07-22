@@ -27,11 +27,17 @@ npm i -D @aboutbits/eslint-config
 
 ### TypeScript
 
+Install the required packages:
+
+```sh
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import
+```
+
 `.eslintrc`
 
 ```json
 {
-  "extends": "@aboutbits/ts"
+  "extends": "@aboutbits/eslint-config/ts"
 }
 ```
 
@@ -40,14 +46,14 @@ npm i -D @aboutbits/eslint-config
 Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 `.eslintrc`
 
 ```json
 {
-  "extends": "@aboutbits/ts-react"
+  "extends": "@aboutbits/eslint-config/ts-react"
 }
 ```
 
@@ -56,14 +62,14 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks
 Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
 ```
 
 `.eslintrc`
 
 ```json
 {
-  "extends": "@aboutbits/ts-next"
+  "extends": "@aboutbits/eslint-config/ts-next"
 }
 ```
 
@@ -72,14 +78,14 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
 Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-formatjs
+npm i -D eslint eslint-plugin-formatjs
 ```
 
 `.eslintrc`
 
 ```json
 {
-  "extends": "@aboutbits/formatjs"
+  "extends": "@aboutbits/eslint-config/formatjs"
 }
 ```
 
@@ -92,14 +98,17 @@ The following shows how to combine it with the preset `ts-next`:
 Install the required packages:
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
 ```
 
 `.eslintrc`
 
 ```json
 {
-  "extends": ["@aboutbits/ts-next", "@aboutbits/formatjs"]
+  "extends": [
+    "@aboutbits/eslint-config/ts-next",
+    "@aboutbits/eslint-config/formatjs"
+  ]
 }
 ```
 
@@ -109,7 +118,7 @@ npm i -D eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next 
 
 ```json
 {
-  "extends": "@aboutbits/ts",
+  "extends": "@aboutbits/eslint-config/ts",
   "rules": {
     // your rules...
   }
