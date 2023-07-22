@@ -13,8 +13,10 @@ module.exports = {
   },
   overrides: [
     {
-      extends: ['plugin:@typescript-eslint/disable-type-checked'],
-      files: ['./**/*.js', './**/*.json']
+      extends: [
+        'plugin:@typescript-eslint/recommended-requiring-type-checking'
+      ],
+      files: ['./**/*.{ts,tsx}']
     }
   ],
   env: {
