@@ -10,12 +10,7 @@
     "readme.md",
     "configs/*"
   ],
-  "exports": {
-    "./ts": "./configs/ts.js",
-    "./ts-react": "./configs/ts-react.js",
-    "./ts-next": "./configs/ts-next.js",
-    "./formatjs": "./configs/formatjs.js"
-  },
+  "main": "./configs/ts.js",
   "engines": {
     "npm": ">=8",
     "node": ">=16"
