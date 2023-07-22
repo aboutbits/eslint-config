@@ -34,6 +34,7 @@
   },
   "keywords": [
     "eslint-config",
+    "eslintconfig",
     "eslint",
     "typescript",
     "react"
@@ -47,21 +48,24 @@
   "prettier": "@aboutbits/prettier-config",
   "dependencies": {
     "@aboutbits/prettier-config": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
-    "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.0"
+    "eslint-config-prettier": "^8.8.0"
   },
   "peerDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "@next/eslint-plugin-next": "^13.4.11",
     "eslint-plugin-formatjs": "^4.5.0"
   },
   "peerDependenciesMeta": {
+    "eslint-plugin-import": {
+      "optional": true
+    },
     "eslint-plugin-react": {
       "optional": true
     },
