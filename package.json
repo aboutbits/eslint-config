@@ -8,9 +8,12 @@
   },
   "files": [
     "readme.md",
-    "configs/*"
+    "ts.js",
+    "ts-react.js",
+    "ts-next.js",
+    "formatjs.js"
   ],
-  "main": "./configs/ts.js",
+  "main": "ts.js",
   "engines": {
     "npm": ">=8",
     "node": ">=16"
