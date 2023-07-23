@@ -11,6 +11,19 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020
   },
+  plugins: ['@typescript-eslint'],
+  env: {
+    node: true,
+    browser: true,
+    es6: true,
+    commonjs: true
+  },
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true
+    }
+  },
   overrides: [
     {
       extends: [
@@ -19,19 +32,6 @@ module.exports = {
       files: ['./**/*.{ts,tsx}']
     }
   ],
-  env: {
-    node: true,
-    browser: true,
-    es6: true,
-    commonjs: true
-  },
-  plugins: ['@typescript-eslint'],
-  settings: {
-    'import/resolver': {
-      typescript: true,
-      node: true
-    }
-  },
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -61,6 +61,10 @@ module.exports = {
       {
         allowNullableBoolean: true
       }
-    ]
+    ],
+    'no-implicit-coercion': 'error',
+    curly: ['error', 'all'],
+    'object-shorthand': ['error'],
+    eqeqeq: 'error'
   }
 }
