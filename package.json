@@ -49,19 +49,23 @@
     "eslint-config-prettier": "^8.8.0"
   },
   "peerDependencies": {
-    "@next/eslint-plugin-next": "^13.4.11",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
     "eslint": "^8.45.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-formatjs": "^4.5.0",
-    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^3.0.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.0.0"
+    "@next/eslint-plugin-next": "^13.4.11",
+    "eslint-plugin-formatjs": "^4.5.0"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-import": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
       "optional": true
     },
     "eslint-plugin-react": {
