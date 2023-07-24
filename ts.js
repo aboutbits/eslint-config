@@ -4,7 +4,6 @@ module.exports = {
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended'
   ],
   parser: '@typescript-eslint/parser',

@@ -3,6 +3,8 @@ module.exports = {
     './ts.js',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:jsx-a11y/recommended',
+    'plugin:tailwindcss/recommended',
     'plugin:prettier/recommended'
   ],
   parserOptions: {
@@ -18,6 +20,7 @@ module.exports = {
   },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error'
+    'react-hooks/exhaustive-deps': 'error',
+    'tailwindcss/classnames-order': 'off'
   }
 }
