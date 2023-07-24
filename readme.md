@@ -83,7 +83,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
-npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-tailwindcss
 ```
 
 `.eslintrc.json`
@@ -102,7 +102,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
-npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-tailwindcss @next/eslint-plugin-next
 ```
 
 `.eslintrc.json`
@@ -144,7 +144,7 @@ The following shows how to combine it with the preset `ts-next`:
 Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
-npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
+npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-tailwindcss @next/eslint-plugin-next eslint-plugin-formatjs
 ```
 
 `.eslintrc.json`
