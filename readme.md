@@ -61,7 +61,7 @@ Then change `.eslintrc.json` to be:
 
 ### TypeScript
 
-Install the required packages:
+Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import
@@ -80,7 +80,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 
 ### TypeScript + React
 
-Install the required packages:
+Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
@@ -99,7 +99,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 
 ### TypeScript + Next.js
 
-Install the required packages:
+Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next
@@ -118,7 +118,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 
 ### FormatJS
 
-Install the required packages:
+Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
 npm i -D eslint eslint-plugin-formatjs
@@ -141,7 +141,7 @@ Most presets are mutually exclusive, which means that you should not combine the
 However, you may combine the preset `formatjs` with any other preset you like.
 The following shows how to combine it with the preset `ts-next`:
 
-Install the required packages:
+Install the required packages, assuming that you have TypeScript already installed:
 
 ```sh
 npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks @next/eslint-plugin-next eslint-plugin-formatjs
