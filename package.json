@@ -19,11 +19,6 @@
     "node": ">=16"
   },
   "scripts": {
-    "build": "",
-    "checks": "",
-    "prepublishOnly": "npm run checks",
-    "prepare": "npm run build",
-    "preversion": "npm run checks",
     "postversion": "git push && git push --tags"
   },
   "repository": {
