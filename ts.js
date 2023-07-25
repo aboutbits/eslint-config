@@ -65,6 +65,7 @@ module.exports = {
     'no-implicit-coercion': 'error',
     curly: ['error', 'all'],
     'object-shorthand': ['error'],
-    eqeqeq: 'error'
+    eqeqeq: 'error',
+    'arrow-body-style': 'error'
   }
 }
