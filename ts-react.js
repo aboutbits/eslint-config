@@ -19,9 +19,13 @@ module.exports = {
     }
   },
   rules: {
+    curly: ['error', 'all'],
+    'react/jsx-curly-brace-presence': [
+      'error',
+      { props: 'never', children: 'never', propElementValues: 'always' }
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'tailwindcss/classnames-order': 'off',
-    curly: ['error', 'all']
+    'tailwindcss/classnames-order': 'off'
   }
 }
