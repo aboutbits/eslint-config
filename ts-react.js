@@ -26,6 +26,7 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'tailwindcss/classnames-order': 'off'
+    'tailwindcss/classnames-order': 'off',
+    'jsx-a11y/no-autofocus': 'off'
   }
 }
