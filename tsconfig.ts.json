@@ -1,0 +1,7 @@
+{
+  "extends": "@aboutbits/ts-config",
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "include": ["test/ts/**/*.ts"]
+}
