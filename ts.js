@@ -56,12 +56,6 @@ module.exports = {
         allow: ['warn', 'error', 'assert']
       }
     ],
-    '@typescript-eslint/strict-boolean-expressions': [
-      'error',
-      {
-        allowNullableBoolean: true
-      }
-    ],
     'no-implicit-coercion': 'error',
     curly: ['error', 'all'],
     'object-shorthand': ['error'],
