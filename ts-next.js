@@ -5,6 +5,7 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   rules: {
+    curly: ['error', 'all'],
     '@next/next/no-img-element': 'off'
   }
 }
