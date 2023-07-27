@@ -1,0 +1,7 @@
+{
+  "extends": "@aboutbits/ts-config/react",
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "include": ["test/ts-next/**/*.ts", "test/ts-next/**/*.tsx"]
+}

@@ -25,6 +25,9 @@
     "ts-react:lint": "eslint -c .eslintrc.ts-react.json test/ts-react",
     "ts-react:lint:fix": "npm run ts-react:lint -- --fix",
     "ts-react:typecheck": "tsc --project tsconfig.ts-react.json --noEmit",
+    "ts-next:lint": "eslint -c .eslintrc.ts-next.json test/ts-next",
+    "ts-next:lint:fix": "npm run ts-next:lint -- --fix",
+    "ts-next:typecheck": "tsc --project tsconfig.ts-next.json --noEmit",
     "postversion": "git push && git push --tags"
   },
   "repository": {

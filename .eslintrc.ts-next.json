@@ -1,0 +1,6 @@
+{
+  "extends": "./ts-next.js",
+  "parserOptions": {
+    "project": "./tsconfig.ts-next.json"
+  }
+}
