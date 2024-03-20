@@ -2,10 +2,29 @@
   "name": "@aboutbits/eslint-config",
   "version": "2.2.3",
   "description": "AboutBits' ESLint config presets",
+  "author": "AboutBits",
+  "license": "MIT",
+  "homepage": "https://github.com/aboutbits/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboutbits/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/aboutbits/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint-config",
+    "eslintconfig",
+    "eslint",
+    "typescript",
+    "react"
+  ],
   "private": false,
   "publishConfig": {
     "access": "public"
   },
+  "prettier": "@aboutbits/prettier-config",
+  "main": "ts.js",
   "files": [
     "readme.md",
     "ts.js",
@@ -13,7 +32,6 @@
     "ts-next.js",
     "formatjs.js"
   ],
-  "main": "ts.js",
   "engines": {
     "npm": ">=8",
     "node": ">=16"
@@ -30,26 +48,30 @@
     "ts-next:typecheck": "tsc --project tsconfig.ts-next.json --noEmit",
     "postversion": "git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aboutbits/eslint-config"
-  },
-  "keywords": [
-    "eslint-config",
-    "eslintconfig",
-    "eslint",
-    "typescript",
-    "react"
-  ],
-  "author": "AboutBits",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aboutbits/eslint-config/issues"
-  },
-  "homepage": "https://github.com/aboutbits/eslint-config",
   "dependencies": {
     "@typescript-eslint/parser": "^6.1.0",
     "eslint-config-prettier": "^8.8.0"
+  },
+  "devDependencies": {
+    "@aboutbits/prettier-config": "^1.6.0",
+    "@aboutbits/ts-config": "^1.1.2",
+    "@types/react": "^18.2.16",
+    "@types/react-dom": "^18.2.7",
+    "eslint-plugin-react": "^7.33.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@next/eslint-plugin-next": "^13.4.11",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-formatjs": "^4.5.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "prettier": "^3.0.0",
+    "typescript": "^4.9.0 || ^5.0.0"
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^13.4.11",
@@ -88,27 +110,5 @@
     "eslint-plugin-tailwindcss": {
       "optional": true
     }
-  },
-  "devDependencies": {
-    "@aboutbits/prettier-config": "^1.6.0",
-    "@aboutbits/ts-config": "^1.1.2",
-    "@types/react": "^18.2.16",
-    "@types/react-dom": "^18.2.7",
-    "eslint-plugin-react": "^7.33.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@next/eslint-plugin-next": "^13.4.11",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "eslint": "^8.45.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-formatjs": "^4.5.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.13.0",
-    "prettier": "^3.0.0",
-    "typescript": "^4.9.0 || ^5.0.0"
-  },
-  "prettier": "@aboutbits/prettier-config"
+  }
 }

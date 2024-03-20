@@ -1,2 +1,18 @@
-node_modules
+# Dependencies
+/node_modules
+
+# Misc
+.DS_Store
+
+# Debug
+npm-debug.log*
+
+# IDE
+/.idea
+/.vscode
+
+# Build
 *.tsbuildinfo
+
+# ESLint
+.eslintcache
