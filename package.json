@@ -1,6 +1,6 @@
 {
   "name": "@aboutbits/eslint-config",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "AboutBits' ESLint config presets",
   "author": "AboutBits",
   "license": "MIT",
