@@ -47,8 +47,25 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'unknown', 'parent', 'sibling', 'index']
-      }
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'unknown',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+        alphabetize: {
+          order: 'asc',
+          orderImportKind: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'never',
+        warnOnUnassignedImports: true,
+      },
     ],
     'no-console': [
       'error',
