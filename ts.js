@@ -48,6 +48,16 @@ module.exports = {
     ],
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        'allowNumber': true,
+        'allowNullish': false,
+        'allowBoolean': false,
+        'allowRegExp': false,
+        'allowNever': false,
+      }
+    ],
     'import/order': [
       'error',
       {
