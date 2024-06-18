@@ -24,6 +24,13 @@ module.exports = {
       'error',
       { props: 'never', children: 'never', propElementValues: 'always' }
     ],
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true,
+      },
+    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'tailwindcss/classnames-order': 'off',
