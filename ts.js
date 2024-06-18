@@ -30,7 +30,11 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking'
       ],
       files: ['./**/*.{ts,tsx}']
-    }
+    },
+    {
+      extends: ['plugin:prettier/recommended'],
+      files: ['./**/*.json'],
+    },
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': [
