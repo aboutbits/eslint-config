@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/strict-type-checked',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:prettier/recommended'
@@ -26,8 +27,7 @@ module.exports = {
   overrides: [
     {
       extends: [
-        'plugin:@typescript-eslint/strict-type-checked',
-        'plugin:@typescript-eslint/stylistic-type-checked',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking'
       ],
       files: ['./**/*.{ts,tsx}']
     }
