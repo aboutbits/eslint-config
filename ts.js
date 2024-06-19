@@ -30,7 +30,11 @@ module.exports = {
         'plugin:@typescript-eslint/stylistic-type-checked',
       ],
       files: ['./**/*.{ts,tsx}']
-    }
+    },
+    {
+      extends: ['plugin:prettier/recommended'],
+      files: ['./**/*.json'],
+    },
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': [
@@ -44,11 +48,38 @@ module.exports = {
     ],
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        'allowNumber': true,
+        'allowNullish': false,
+        'allowBoolean': false,
+        'allowRegExp': false,
+        'allowNever': false,
+      }
+    ],
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'unknown', 'parent', 'sibling', 'index']
-      }
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'unknown',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+        alphabetize: {
+          order: 'asc',
+          orderImportKind: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'never',
+        warnOnUnassignedImports: true,
+      },
     ],
     'no-console': [
       'error',
