@@ -84,6 +84,7 @@ module.exports = {
     'sort-imports': [
       'error',
       {
+        // The declarations are sorted more granularly by the import/order plugin.
         ignoreDeclarationSort: true
       }
     ],
