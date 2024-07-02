@@ -81,6 +81,12 @@ module.exports = {
         warnOnUnassignedImports: true,
       },
     ],
+    'sort-imports': [
+      'error',
+      {
+        ignoreDeclarationSort: true
+      }
+    ],
     'no-console': [
       'error',
       {
