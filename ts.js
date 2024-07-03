@@ -58,6 +58,10 @@ module.exports = {
         'allowNever': false,
       }
     ],
+    '@typescript-eslint/consistent-type-definitions': [
+      'error',
+      'type'
+    ],
     'import/order': [
       'error',
       {
