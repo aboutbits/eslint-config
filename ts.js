@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:prettier/recommended'
@@ -25,12 +26,6 @@ module.exports = {
     }
   },
   overrides: [
-    {
-      extends: [
-        'plugin:@typescript-eslint/recommended-requiring-type-checking'
-      ],
-      files: ['./**/*.{ts,tsx}']
-    },
     {
       extends: ['plugin:prettier/recommended'],
       files: ['./**/*.json'],
@@ -57,6 +52,10 @@ module.exports = {
         'allowRegExp': false,
         'allowNever': false,
       }
+    ],
+    '@typescript-eslint/consistent-type-definitions': [
+      'error',
+      'type'
     ],
     'import/order': [
       'error',
