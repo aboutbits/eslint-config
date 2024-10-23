@@ -1,11 +1,12 @@
 module.exports = {
   extends: [
     './ts-react.js',
-    'plugin:@next/next/core-web-vitals',
-    'plugin:prettier/recommended'
+    'next/core-web-vitals',
+    'next/typescript',
+    'plugin:prettier/recommended',
   ],
   rules: {
     curly: ['error', 'all'],
-    '@next/next/no-img-element': 'off'
-  }
+    '@next/next/no-img-element': 'off',
+  },
 }
