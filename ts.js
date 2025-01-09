@@ -29,6 +29,10 @@ module.exports = {
     {
       extends: ['plugin:prettier/recommended'],
       files: ['./**/*.json'],
+      // TODO: Check why this rule has to be disabled for JSON files.
+      rules: {
+        "@typescript-eslint/no-unused-expressions": "off"
+      }
     },
   ],
   rules: {
