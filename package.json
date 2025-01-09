@@ -49,7 +49,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^6.1.0 || ^7.3.1",
+    "@typescript-eslint/parser": "^6.1.0 || ^7.3.1 || ^8.0.0",
     "eslint-config-prettier": "^8.8.0 || ^9.1.0"
   },
   "devDependencies": {
@@ -74,7 +74,7 @@
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^13.4.11 || ^14.1.4",
-    "@typescript-eslint/eslint-plugin": "^6.1.0 || ^7.3.1",
+    "@typescript-eslint/eslint-plugin": "^6.1.0 || ^7.3.1 || ^8.0.0",
     "eslint": "^8.45.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-formatjs": "^4.5.0",
