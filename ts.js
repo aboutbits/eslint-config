@@ -61,6 +61,7 @@ module.exports = {
       'error',
       'type'
     ],
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
     'import/order': [
       'error',
       {
