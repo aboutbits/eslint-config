@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'eslint-plugin-unused-imports'],
   env: {
     node: true,
     browser: true,
@@ -36,15 +36,6 @@ module.exports = {
     },
   ],
   rules: {
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        ignoreRestSiblings: true,
-        varsIgnorePattern: '^[iI]gnored',
-        argsIgnorePattern: '^_',
-        caughtErrorsIgnorePattern: '^ignore'
-      }
-    ],
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/restrict-template-expressions': [
@@ -96,6 +87,19 @@ module.exports = {
     curly: ['error', 'all'],
     'object-shorthand': ['error'],
     eqeqeq: 'error',
-    'arrow-body-style': 'error'
-  }
+    'arrow-body-style': 'error',
+
+    // Rules for eslint-plugin-unused-imports
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'error',
+      {
+        ignoreRestSiblings: true,
+        varsIgnorePattern: '^[iI]gnored',
+        argsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^ignore',
+      },
+    ],
+  },
 }
