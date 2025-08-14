@@ -29,7 +29,7 @@ We recommend linting by running `eslint` without `--ext` option. What files are 
 All files included (or not ignored) by the ESLint config (`.eslintrc.json`) must be included by the TypeScript config (`tsconfig.json`).
 For example, if this is your `.eslintrc.json`:
 
-```json
+```jsonc
 {
   // ...remaining config
   "ignorePatterns": ["node_modules", "dist"]
@@ -38,7 +38,7 @@ For example, if this is your `.eslintrc.json`:
 
 You may include the following files inside your `tsconfig.json`:
 
-```json
+```jsonc
 {
   // ...remaining config
   "exclude": ["node_modules", "dist"],
@@ -49,7 +49,7 @@ You may include the following files inside your `tsconfig.json`:
 Should you have files that you want to be linted, but not inside your `tsconfig.json`, you can create a `tsconfig.eslint.json` file.
 Then change `.eslintrc.json` to be:
 
-```json
+```jsonc
 {
   // ...omitted
   "parserOptions": {
@@ -165,7 +165,7 @@ npm i -D eslint prettier @typescript-eslint/eslint-plugin eslint-plugin-prettier
 
 `.eslintrc.json`
 
-```json
+```jsonc
 {
   "extends": "@aboutbits/eslint-config/ts",
   "parserOptions": {
