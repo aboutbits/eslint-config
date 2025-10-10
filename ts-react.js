@@ -1,10 +1,15 @@
+const eslintPluginBetterTailwindcss = require('eslint-plugin-better-tailwindcss')
+const {
+  getDefaultCallees,
+  getDefaultVariables,
+} = require('eslint-plugin-better-tailwindcss/api/defaults')
+
 module.exports = {
   extends: [
     './ts.js',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
-    'plugin:tailwindcss/recommended',
     'plugin:prettier/recommended'
   ],
   parserOptions: {
@@ -12,11 +17,31 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ['react', 'react-hooks'],
+  plugins: ['react', 'react-hooks', 'better-tailwindcss'],
   settings: {
     react: {
       version: 'detect'
-    }
+    },
+    'better-tailwindcss': {
+        callees: [
+          ...getDefaultCallees(),
+          [
+            'classNames',
+            [
+              { match: 'strings' },
+              {
+                match: 'objectKeys',
+                pathPattern: '.*',
+              },
+              {
+                match: 'objectValues',
+                pathPattern: '.*',
+              },
+            ],
+          ],
+        ],
+        variables: [...getDefaultVariables(), '.*ClassNames?$'],
+      },
   },
   rules: {
     curly: ['error', 'all'],
@@ -33,7 +58,26 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'tailwindcss/classnames-order': 'off',
-    'jsx-a11y/no-autofocus': 'off'
+    'jsx-a11y/no-autofocus': 'off',
+
+    // Recommended rules
+    ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
+
+    // Configure rules
+    'better-tailwindcss/enforce-consistent-line-wrapping': ['off'], // This rule is not compatible with prettier
+    'better-tailwindcss/enforce-consistent-class-order': [
+      'error',
+      {
+        // Use official Tailwind CSS class order to be in line with the Prettier plugin
+        order: 'official',
+      },
+    ],
+
+    // Additional rules
+    'better-tailwindcss/enforce-consistent-variable-syntax': ['error'],
+    'better-tailwindcss/enforce-consistent-important-position': ['error'],
+    'better-tailwindcss/enforce-shorthand-classes': ['error'],
+    'better-tailwindcss/no-deprecated-classes': ['error'],
+    'better-tailwindcss/no-conflicting-classes': ['error'],
   }
 }
