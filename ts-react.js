@@ -10,44 +10,44 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ['react', 'react-hooks', 'better-tailwindcss'],
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
     'better-tailwindcss': {
-        callees: [
-          ...getDefaultCallees(),
+      callees: [
+        ...getDefaultCallees(),
+        [
+          'classNames',
           [
-            'classNames',
-            [
-              { match: 'strings' },
-              {
-                match: 'objectKeys',
-                pathPattern: '.*',
-              },
-              {
-                match: 'objectValues',
-                pathPattern: '.*',
-              },
-            ],
+            { match: 'strings' },
+            {
+              match: 'objectKeys',
+              pathPattern: '.*',
+            },
+            {
+              match: 'objectValues',
+              pathPattern: '.*',
+            },
           ],
         ],
-        variables: [...getDefaultVariables(), '.*ClassNames?$'],
-      },
+      ],
+      variables: [...getDefaultVariables(), '.*ClassNames?$'],
+    },
   },
   rules: {
     curly: ['error', 'all'],
     'react/jsx-curly-brace-presence': [
       'error',
-      { props: 'never', children: 'never', propElementValues: 'always' }
+      { props: 'never', children: 'never', propElementValues: 'always' },
     ],
     'react/self-closing-comp': [
       'error',
@@ -68,7 +68,6 @@ module.exports = {
     'better-tailwindcss/enforce-consistent-class-order': [
       'error',
       {
-        // Use official Tailwind CSS class order to be in line with the Prettier plugin
         order: 'official',
       },
     ],
@@ -78,6 +77,5 @@ module.exports = {
     'better-tailwindcss/enforce-consistent-important-position': ['error'],
     'better-tailwindcss/enforce-shorthand-classes': ['error'],
     'better-tailwindcss/no-deprecated-classes': ['error'],
-    'better-tailwindcss/no-conflicting-classes': ['error'],
-  }
+  },
 }
