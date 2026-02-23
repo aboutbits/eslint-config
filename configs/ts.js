@@ -43,6 +43,7 @@ export default defineConfig([
           destructuredArrayIgnorePattern: '^_',
         },
       ],
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/restrict-template-expressions': [
         'error',
         {

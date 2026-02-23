@@ -24,6 +24,7 @@
     "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
+  "type": "module",
   "prettier": "@aboutbits/prettier-config",
   "files": [
     "configs/formatjs.js",
