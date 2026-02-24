@@ -44,6 +44,7 @@ export default defineConfig([
         },
       ],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/restrict-template-expressions': [
         'error',
         {
@@ -79,12 +80,7 @@ export default defineConfig([
           },
           'newlines-between': 'never',
           warnOnUnassignedImports: true,
-        },
-      ],
-      'sort-imports': [
-        'error',
-        {
-          ignoreDeclarationSort: true,
+          named: true,
         },
       ],
       'no-console': [
