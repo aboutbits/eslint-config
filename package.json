@@ -45,7 +45,6 @@
     "./configs/ts": "./configs/ts.js",
     "./configs/storybook": "./configs/storybook.js"
   },
-
   "engines": {
     "npm": ">=10",
     "node": ">=18"
@@ -78,8 +77,10 @@
     "typescript-eslint": "^8.56.0"
   },
   "devDependencies": {
+    "@aboutbits/prettier-config": "^2.0.2",
     "@next/eslint-plugin-next": "^16.1.6",
-    "eslint-plugin-storybook": "^10.2.10"
+    "eslint-plugin-storybook": "^10.2.10",
+    "prettier": "^3.8.1"
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^14 || ^15 || ^16",
