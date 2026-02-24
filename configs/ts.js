@@ -71,7 +71,7 @@ export default defineConfig([
           alphabetize: {
             order: 'asc',
             orderImportKind: 'asc',
-            caseInsensitive: true,
+            caseInsensitive: false,
           },
           'newlines-between': 'never',
           warnOnUnassignedImports: true,
