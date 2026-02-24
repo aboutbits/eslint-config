@@ -3,6 +3,7 @@ import json from '@eslint/json'
 import { defineConfig } from 'eslint/config'
 import importPlugin from 'eslint-plugin-import'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import unusedImports from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 import { configs as tseslintConfigs } from 'typescript-eslint'
 
@@ -27,6 +28,9 @@ export default defineConfig([
       importPlugin.flatConfigs.typescript,
       eslintPluginPrettierRecommended,
     ],
+    plugins: {
+      'unused-imports': unusedImports,
+    },
     settings: {
       'import/resolver': {
         typescript: true,
@@ -34,15 +38,6 @@ export default defineConfig([
       },
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-        },
-      ],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/restrict-template-expressions': [
@@ -93,6 +88,19 @@ export default defineConfig([
       curly: ['error', 'all'],
       'object-shorthand': ['error'],
       eqeqeq: 'error',
+
+      // Rules for eslint-plugin-unused-imports
+      '@typescript-eslint/no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+        },
+      ],
     },
   },
   {
