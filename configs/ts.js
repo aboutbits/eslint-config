@@ -51,6 +51,12 @@ export default defineConfig([
           allowNever: false,
         },
       ],
+      '@typescript-eslint/prefer-nullish-coalescing': [
+        'error',
+        {
+          ignorePrimitives: { boolean: true },
+        },
+      ],
       '@typescript-eslint/member-delimiter-style': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-deprecated': 'warn',
