@@ -120,4 +120,10 @@ export default defineConfig([
     language: 'json/json',
     extends: [eslintPluginPrettierRecommended, json.configs.recommended],
   },
+  {
+    // tsconfig/jsconfig files conventionally allow comments (JSONC), which the
+    // strict `json/json` language above rejects.
+    files: ['**/tsconfig*.json', '**/jsconfig*.json'],
+    language: 'json/jsonc',
+  },
 ])
