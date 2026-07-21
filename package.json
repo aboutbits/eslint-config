@@ -34,7 +34,7 @@
     "configs/storybook.js",
     "configs/tailwind.js",
     "configs/ts.js",
-    "readme.md"
+    "README.md"
   ],
   "exports": {
     "./configs/formatjs": "./configs/formatjs.js",
