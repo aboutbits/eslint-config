@@ -51,9 +51,26 @@ export default defineConfig([
           allowNever: false,
         },
       ],
+      '@typescript-eslint/prefer-nullish-coalescing': [
+        'error',
+        {
+          ignorePrimitives: { boolean: true },
+        },
+      ],
       '@typescript-eslint/member-delimiter-style': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-deprecated': 'warn',
+      // ----
+      // TypeScript reports all of these rules as part of normal type checking,
+      // and the plugin re-parses the whole import graph to do it.
+      // https://typescript-eslint.io/troubleshooting/typed-linting/performance#eslint-plugin-import
+      // Note: import/no-unresolved stays on, since tsc accepts any path matched by a
+      // wildcard (e.g. Next's '*.module.css') without checking that the file exists.
+      'import/named': 'off',
+      'import/namespace': 'off',
+      'import/default': 'off',
+      'import/no-named-as-default-member': 'off',
+      // ----
       'import/order': [
         'error',
         {
@@ -113,5 +130,11 @@ export default defineConfig([
     plugins: { json },
     language: 'json/json',
     extends: [eslintPluginPrettierRecommended, json.configs.recommended],
+  },
+  {
+    // tsconfig/jsconfig files conventionally allow comments (JSONC), which the
+    // strict `json/json` language above rejects.
+    files: ['**/tsconfig*.json', '**/jsconfig*.json'],
+    language: 'json/jsonc',
   },
 ])
