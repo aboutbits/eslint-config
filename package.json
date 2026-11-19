@@ -63,7 +63,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-better-tailwindcss": "^4.3.0",
-    "eslint-plugin-formatjs": "^6.6.3",
+    "eslint-plugin-formatjs": "^8.1.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jest": "^29.16.6",
     "eslint-plugin-jsonc": "^3.1.0",
